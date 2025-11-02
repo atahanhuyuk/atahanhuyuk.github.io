@@ -83,7 +83,7 @@ a {
 /* --- Responsive --- */
 @media (max-width: 600px) {
   .panel, .content, .footer {
-    width: calc(100% - 40px);
+    width: calc(100% - 75px);
     margin-left: 20px;
     margin-right: 20px;
   }
