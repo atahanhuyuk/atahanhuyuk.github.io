@@ -93,6 +93,6 @@ a {
   }
 
   .side {
-    order: 1;
+    order: -1;
   }
 }
