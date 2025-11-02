@@ -2,23 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Spotify Redirect</title>
+    <title>spotify manager redirect</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div class="header">
-        <h1>Spotify Authorization</h1>
-        <p>Redirect successful!</p>
+        <h1>spotify authorization</h1>
+        <p>redirect successful!</p>
     </div>
 
     <div class="center">
         <div class="main">
-            <p>If you’re running your Spotify script, copy the full URL from your browser’s address bar and paste it into your terminal when prompted.</p>
+            <p>you may now copy the url below and paste it to the spotify manager app as prompted</p>
+            <p id="url"></p>
         </div>
     </div>
 
     <div class="footer">
         <a href="mailto:atahan.huyuk@ug.bilkent.edu.tr">atahan.huyuk@ug.bilkent.edu.tr</a>
     </div>
+
+    <script>
+        document.getElementById("url").textContent = window.location.href;
+    </script>
 </body>
 </html>
