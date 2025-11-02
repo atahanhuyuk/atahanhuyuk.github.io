@@ -81,7 +81,7 @@ a {
 }
 
 /* --- Responsive --- */
-@media (max-width: 1060px) {
+@media (max-width: 600px) {
   .panel, .content, .footer {
     width: calc(100% - 40px);
     margin-left: 20px;
@@ -90,5 +90,9 @@ a {
 
   .content {
     flex-direction: column;
+  }
+
+  .side{
+    order: -1;
   }
 }
