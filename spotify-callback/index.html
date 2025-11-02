@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Spotify Callback</title>
+  <style>
+    body {
+      font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      padding: 2rem;
+      background: #fafafa;
+      color: #222;
+    }
+    pre {
+      background: #f3f3f3;
+      padding: 1rem;
+      white-space: pre-wrap;
+      word-break: break-all;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      border: none;
+      background: #1DB954;
+      color: white;
+    }
+    button:hover {
+      background: #17a44f;
+    }
+  </style>
+</head>
+<body>
+  <h2>Spotify Authorization Complete</h2>
+  <p>
+    If you see <code>?code=...</code> in the address bar, copy the <strong>whole</strong> URL
+    and paste it back into your Python script.
+  </p>
+
+  <pre id="full"></pre>
+  <button id="copy">Copy URL</button>
+
+  <script>
+    const full = window.location.href;
+    document.getElementById('full').textContent = full;
+    document.getElementById('copy').onclick = () => {
+      navigator.clipboard.writeText(full).then(() => {
+        alert('Copied the full URL to your clipboard!');
+      });
+    };
+  </script>
+</body>
+</html>
